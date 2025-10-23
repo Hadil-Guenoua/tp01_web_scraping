@@ -62,9 +62,9 @@ def scrape_goodreads_books():
     
     return books_data[:1000]
 
-# Run the script
 books = scrape_goodreads_books()
 
 # Save to CSV
 df = pd.DataFrame(books)
+
 df.to_csv('goodreads_books.csv', index=False, encoding='utf-8')
